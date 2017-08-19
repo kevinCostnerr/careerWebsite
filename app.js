@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const style = {
   margin: 12,
 };
 
-class App extends React.Component {
+export default React.createClass({
   render(){
     return (
     <div>
@@ -24,9 +25,11 @@ class App extends React.Component {
         <MuiThemeProvider>
           <RaisedButton label="Sign Up" primary={true} style={style} />
         </MuiThemeProvider>
+        <br />
+        <ul>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/repos">Repos</Link></li>
+        </ul>
     </div>
   )}
-}
-
-ReactDOM.render(<App />,
-document.getElementById('app'));
+})
