@@ -21,6 +21,7 @@ export default class SignIn extends React.Component{
                     <Link to="/"><FlatButton label="Career Website" primary={true} /></Link>
                 </ToolbarGroup>
                 <ToolbarGroup lastChild={true}>
+                    <Link to="/create-internship"><FlatButton label="Post" /></Link>
                     <Link to="/signup"><FlatButton label="Sign Up"  /></Link>
                     <Link to="/signin"><FlatButton label="Sign In" /></Link>
                 </ToolbarGroup>

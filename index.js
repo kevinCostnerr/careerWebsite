@@ -8,6 +8,7 @@ import { HashRouter, Route } from 'react-router-dom';
 import App from './App';
 import SignUp from './SignUp';
 import SignIn from './SignIn';
+import CreateJobPost from './CreateJobPost';
 
 ReactDOM.render(
     <HashRouter>
@@ -15,6 +16,7 @@ ReactDOM.render(
         <Route exact path="/" component={App} />
         <Route path="/signup" component={SignUp} />
         <Route path="/signin" component={SignIn} />
+        <Route path="/create-internship" component={CreateJobPost} />
       </div>
     </HashRouter>,
     document.getElementById('app')
