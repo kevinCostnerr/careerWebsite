@@ -1,8 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import { FlatButton, ToolbarGroup, Toolbar, ToolbarTitle } from 'material-ui';
+import { FlatButton, ToolbarGroup, Toolbar, ToolbarTitle, Paper, Avatar } from 'material-ui';
 import { HashLink as Link } from 'react-router-hash-link';
+
+const style = {
+  margin: 40,
+  padding: 40,
+  textAlign: 'center',
+};
+
+const picStyle = {
+  height: 150,
+  width: 150,
+  margin: 20,
+}
 
 export default class App extends React.Component{
   render(){
@@ -18,6 +30,15 @@ export default class App extends React.Component{
             <Link to="/signin"><FlatButton label="Sign In" /></Link>
           </ToolbarGroup>
         </Toolbar>
+      </MuiThemeProvider>
+      <MuiThemeProvider>
+        <Paper style={style} zDepth={1}>
+          <h1>Welcome to Career Website</h1>
+          <img src="./Images/collaboration.png" style={picStyle} />
+          <p>We help you find the right internship opportunities</p>
+          <FlatButton label="Find Internships" primary={true} />
+          <FlatButton label="For Employers" secondary={true} />
+        </Paper>
       </MuiThemeProvider>
     </div>
   )}
