@@ -38,7 +38,7 @@ export default class App extends React.Component{
           <img src="./Images/collaboration.png" style={picStyle} />
           <p>We help you find the right internship opportunities</p>
           <FlatButton label="Find Internships" primary={true} />
-          <FlatButton label="For Employers" secondary={true} />
+          <FlatButton label="CW For Employers" secondary={true} />
         </Paper>
       </MuiThemeProvider>
     </div>

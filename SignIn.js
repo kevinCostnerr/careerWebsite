@@ -4,11 +4,21 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { FlatButton, ToolbarGroup, Toolbar, ToolbarTitle, Paper, TextField, RaisedButton } from 'material-ui';
 import { HashLink as Link } from 'react-router-hash-link';
 
-const style = {
-    margin: 20,
-    padding: 40,
-    textAlign: 'center',
-    display: 'inline-block',
+const styles = {
+    paper: {
+        margin: 20,
+        padding: 40,
+        display: 'flex',
+        flex: 1,
+        flexDirection: 'column',
+        alignItems: 'center'
+    },
+    textField: {
+        width: '40%',
+    },
+    submitBtn: {
+        marginTop: 40,
+    }
 };
 
 export default class SignIn extends React.Component{
@@ -28,11 +38,11 @@ export default class SignIn extends React.Component{
                 </Toolbar>
             </MuiThemeProvider>
             <MuiThemeProvider>
-                <Paper style={style} zDepth={1}>
+                <Paper style={styles.paper} zDepth={1}>
                     <h1>Sign In</h1>
-                    <TextField floatingLabelText="Email" /><br />
-                    <TextField floatingLabelText="Password" type="password" /><br /><br /><br />
-                    <RaisedButton label="Submit" primary={true} />
+                    <TextField floatingLabelText="Email" style={styles.textField} />
+                    <TextField floatingLabelText="Password" type="password" style={styles.textField} />
+                    <RaisedButton label="Submit" primary={true} style={styles.submitBtn} />
                 </Paper>
             </MuiThemeProvider>
         </div>
