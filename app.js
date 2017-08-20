@@ -11,7 +11,7 @@ export default class App extends React.Component{
       <MuiThemeProvider>
         <Toolbar>
           <ToolbarGroup firstChild={true}>
-            <ToolbarTitle text="Career Website" />
+            <Link to="/"><FlatButton label="Career Website" primary={true} /></Link>
           </ToolbarGroup>
           <ToolbarGroup lastChild={true}>
             <Link to="/signup"><FlatButton label="Sign Up"  /></Link>
