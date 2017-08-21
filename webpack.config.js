@@ -1,3 +1,6 @@
+/**
+ * This is the configuration to run the websites
+ */
 var path = require('path');
 var webpack = require('webpack');
 

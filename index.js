@@ -1,15 +1,18 @@
+// Import front-end root components
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
-import RaisedButton from 'material-ui/RaisedButton';
+
+// Import a front-end router to link one page to another page
 import { Link } from 'react-router'
 import { HashRouter, Route } from 'react-router-dom';
+
+// Import every page component
 import App from './App';
 import SignUp from './SignUp';
 import SignIn from './SignIn';
 import CreateJobPost from './CreateJobPost';
 
+/* */
 ReactDOM.render(
     <HashRouter>
       <div>
