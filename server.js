@@ -5,10 +5,15 @@ This file is used to initialise the express server
 var path = require('path');
 var fs = require('fs');
 var express = require('express');
+var bodyParser = require('body-parser')
 // initialise the  variable that is going to be the port number
 var port = 8000;
 // initialise app variable using express
 var app = express();
+
+User = require('./model/user')
+
+mongose.connect('mongoodb://localhost/careerwebsite');
 
 // setting the html as the view engine
 app.set('view engine', 'html');
@@ -21,10 +26,41 @@ app.engine('html', function(path, options, callbacks){
 // use express middleware to handles serving up the content from a directory
 app.use(express.static(__dirname));
 
+app.use(bodyParser.json());
+
 // adding the routes for the index.html
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, 'index.html'));
 });
+
+app.get('/api/user', function(req, res)){
+	User.getUsers(function(err, users){
+		if(err){
+			throw err;
+		}
+		res.json(users);
+	})
+}
+app.post('/api/user', function(req, res)){
+	var user = req.body;
+	User.addUser(user, function(err, users){
+		if(err){
+			throw err;
+		}
+		res.json(users);
+	})
+}
+
+app.put('/api/user/:id', function(req, res)){
+	var id = req.params._id;
+	var user = req.body;
+	User.updateUser(id, user, {}, function(err, users){
+		if(err){
+			throw err;
+		}
+		res.json(users);
+	})
+}
 
 //catch error when the server is ran
 app.use(function(err, req, res, next){
