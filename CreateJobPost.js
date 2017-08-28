@@ -5,14 +5,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// Import Material UI
+/*  Import Material UI*/
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { FlatButton, ToolbarGroup, Toolbar, ToolbarTitle, Paper, TextField, RaisedButton, DatePicker, SelectField, MenuItem } from 'material-ui';
 
-// Import for routing
+/* Import for routing */
 import { HashLink as Link } from 'react-router-hash-link';
 
-// Styling for Create Job Post page
+/* Styling for Create Job Post page */
 const styles = {
     form: {
         margin: 20,
@@ -33,10 +33,10 @@ const styles = {
     }
 };
 
-// String values
+/* String values */
 const pageTitle = "Post an Internship";
 
-// Contains all View components displayed in Create Job Post page
+/* Contains all View components displayed in Create Job Post page */
 export default class CreateJobPost extends React.Component{
   render(){
     return (
