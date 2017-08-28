@@ -1,4 +1,4 @@
-
+/* User schema 8*/
 var mongoose = require(‘mongoose’);
 const userSchema = mongoose.Schema({
 	email:{
@@ -11,16 +11,16 @@ const userSchema = mongoose.Schema({
 	}
 });
 const User = module.exports = mongoose.model('User', userSchema);
-//get User
+/*get User*/
 module.exports.getUsers = (callback, limit) => {
 	User.find(callback).limit(limit);
 }
-//add User
+/*add User*/
 module.exports.addUser = (user, callback) => {
 	User.create(user, callback);
 }
 
-//update User
+/*update User*/
 module.exports.updateUser = (id, user, options, callback) => {
 	var query = {_id: id};
 	var update = {

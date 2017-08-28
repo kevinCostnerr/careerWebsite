@@ -4,14 +4,13 @@ This page is the front end for the Sign Up view
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-// importing the MUIThemeProvider from material ui library
+/* importing the MUIThemeProvider from material ui library */
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-// importing the components from material ui
 import { FlatButton, ToolbarGroup, Toolbar, ToolbarTitle, Paper, TextField, RaisedButton } from 'material-ui';
-// import the routing
+/* import the routing */
 import { HashLink as Link } from 'react-router-hash-link';
 
-// Styling for SignUp page
+/* Styling for SignUp page */
 const styles = {
     paper: {
         margin: 20,

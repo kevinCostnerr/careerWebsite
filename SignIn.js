@@ -4,15 +4,15 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-// Import Material UI
+ 
+/* Import Material UI */
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { FlatButton, ToolbarGroup, Toolbar, ToolbarTitle, Paper, TextField, RaisedButton } from 'material-ui';
 
-// Import for routing
+/* Import for routing */
 import { HashLink as Link } from 'react-router-hash-link';
 
-// Styling for Sign In page
+/* Styling for Sign In page */
 const styles = {
     paper: {
         margin: 20,
@@ -30,10 +30,10 @@ const styles = {
     }
 };
 
-// String values
+/* String values */
 const pageTitle = "Sign In";
 
-// Contains all View components for Sign In page.
+/* Contains all View components for Sign In page. */
 export default class SignIn extends React.Component{
   render(){
     return (
