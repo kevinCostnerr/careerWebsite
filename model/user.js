@@ -1,6 +1,6 @@
 
 var mongoose = require(‘mongoose’);
-var UserSchema = mongoose.Schema({
+const userSchema = mongoose.Schema({
 	email:{
 		type: String,
 		required: true;
@@ -10,22 +10,22 @@ var UserSchema = mongoose.Schema({
 		required: true;
 	}
 });
-var User = module.exports = mongoose.model('User, UserSchema');
+const User = module.exports = mongoose.model('User', userSchema);
 //get User
-module.exports.getUsers = function (callback, limit){
+module.exports.getUsers = (callback, limit) => {
 	User.find(callback).limit(limit);
 }
 //add User
-module.exports.addUser = function (user, callback){
+module.exports.addUser = (user, callback) => {
 	User.create(user, callback);
 }
 
 //update User
-module.exports.updateUser = function (id, user, options, callback){
+module.exports.updateUser = (id, user, options, callback) => {
 	var query = {_id: id};
 	var update = {
 		name: user.name
-		password : password.name
+		password : user.password
 	}
 	User.findOneAndUpdate(query, update, options, callback);
 }
